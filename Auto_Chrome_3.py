@@ -116,11 +116,11 @@ def main_program_loop():
     browser_port=int(p.get())
     ###new chrome options
     if opsys == "Windows":
-        ser = Service(main_directory + "/chromedriver.exe")
+        ser = Service(main_directory + "/chromedrivers/chromedriver.exe")
     elif opsys == "Darwin":
-        ser = Service(main_directory + "/chromedriver")
+        ser = Service(main_directory + "/chromedrivers/chromedriver")
     else:
-        ser = Service(main_directory + "/linuxchromedriver")
+        ser = Service(main_directory + "/chromedrivers/linuxchromedriver")
     
     op = webdriver.ChromeOptions()
     op.add_experimental_option("debuggerAddress", "localhost:{port_num}".format(port_num=browser_port))
