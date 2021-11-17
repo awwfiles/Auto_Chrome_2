@@ -22,6 +22,15 @@ while loop_amount != 0:
             driver.switch_to.window(driver.window_handles[0])
             go_to("https://rarible.com/create")
             css_and_click("button[id='create-single']")
+            css_and_click("button[data-marker='restore-modal/discardButton']")
+            break
+        except Exception as wtf:
+            #print(wtf)
+            #print("----- retrying uploading -----")
+            break
+
+    while True:
+        try:
             imagePath = os.path.abspath(file_path + "\\" + str(start_num) + "." + loop_file_format)
             css_and_key("input[name='primary-attachment']", imagePath)
             css_and_click("img[alt='{list_op}']".format(list_op = listing_option)) 
