@@ -1,7 +1,7 @@
 #####VARIABLE START####### (FILL BEFORE STARTING) ####
 file_path = "K:\\2021 Backups\\Blender\\projects\\Crypto-Verse\\Gen Season\\8706_10000"     #keep the ##\\##
 collection_link = "https://opensea.io/collection/cryptoverse-lone-wanderer"
-start_num = 8934
+start_num = 9331
 loop_price = 0.1
 loop_title = "#"
 loop_file_format = "png"
@@ -23,16 +23,28 @@ while loop_amount != 0:
 			xpath_and_key('//*[@id="description"]', loop_description)
 			###ADD PROPERTIES CODE HERE###
 			xpath_and_click('//*[@id="__next"]/div[1]/main/div/div/section/div[2]/form/div[9]/div[1]/span/button')
-			css_and_click("i[aria-label='Close']")
 			break
 		except Exception as wtf:
-			print(wtf)
-			print("----- retryign uploading -----")
+			#print(wtf)
+			print("----- Retrying uploading -----")
 			continue
 
+	while True:
+		try:
+			css_and_click("i[aria-label='Close']")
+			time.sleep(1)
+			break
+		except Exception as wtf:
+			#print(wtf)
+			print("----- upload complete, No upload confirmation, reloading page to start lisitng -----")
+			current_page=driver.current_url
+			go_to(current_page)
+			break
+
+
 	###LISTING####
-	main_page = driver.current_window_handle
 	current_page=driver.current_url
+	main_page = driver.current_window_handle
 	while True:
 		try:
 			linktext_click("Sell")
@@ -50,11 +62,14 @@ while loop_amount != 0:
 			css_and_click("i[aria-label='Close']")
 			break
 		except Exception as wtf:
-			print(wtf)
-			print("----- refreshing and trying -----")
+			#print(wtf)
+			print("----- refreshing and retrying -----")
 			go_to(current_page)
 			continue
 		
 	start_num = start_num + 1
 	loop_amount = loop_amount - 1
+
+
+
 
