@@ -23,12 +23,24 @@ while loop_amount != 0:
 			xpath_and_key('//*[@id="description"]', loop_description)
 			###ADD PROPERTIES CODE HERE###
 			xpath_and_click('//*[@id="__next"]/div[1]/main/div/div/section/div[2]/form/div[9]/div[1]/span/button')
-			css_and_click("i[aria-label='Close']")
 			break
 		except Exception as wtf:
-			print(wtf)
-			print("----- retrying uploading -----")
+			#print(wtf)
+			print("----- Retrying uploading -----")
 			continue
+
+	while True:
+		try:
+			css_and_click("i[aria-label='Close']")
+			time.sleep(1)
+			break
+		except Exception as wtf:
+			#print(wtf)
+			print("----- upload complete, No upload confirmation, reloading page to start lisitng -----")
+			#current_page=driver.current_url
+			#go_to(current_page)
+			break
+
 
     main_page = driver.current_window_handle
     current_page=driver.current_url

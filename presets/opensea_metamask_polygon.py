@@ -37,8 +37,8 @@ while loop_amount != 0:
 		except Exception as wtf:
 			#print(wtf)
 			print("----- upload complete, No upload confirmation, reloading page to start lisitng -----")
-			current_page=driver.current_url
-			go_to(current_page)
+			#current_page=driver.current_url
+			#go_to(current_page)
 			break
 
 
