@@ -194,7 +194,7 @@ e.pack(anchor=W, pady=1, padx=1)
 #wait time in sec
 w = Entry(root)
 w.insert(1, 30)
-w.label = Label(text= "Wait amount(s):")
+w.label = Label(text= "Wait amount(s): change depending on your upload speed, more = less crash")
 w.label.pack(anchor=W, pady=0, padx=1)
 w.config(font=(my_font, 8))
 w.label.config(font=(my_font, 8))
