@@ -12,10 +12,22 @@ loop_description = "Lone wanderer is a series of 10000 collectible planets. The 
 while loop_amount != 0:
 	while True:
 		try:
+			go_to(collection_link+"/assets/create")
+			wait.until(ExpectedConditions.presence_of_element_located((By.XPATH, "//*[@id='__next']/div[1]/main/div/div/section/div[2]/header/h1")))
+			break
+		except Exception as wtf:
+			#print(wtf)
+			print("----- Network error, waiting eo seocnds before restarting -----")
+			time.sleep(30)
+			continue
+
+
+	while True:
+		try:
 			####UPLOADING####
 			print("Uploading: " + str(start_num) + "  -  " + str(loop_amount) + " to go...")
-			go_to(collection_link)
-			linktext_click("Add item")
+			
+			#linktext_click("Add item")
 			imagePath = os.path.abspath(file_path + "\\" + str(start_num) + "." + loop_file_format)
 			xpath_and_key('//*[@id="media"]', imagePath)
 			xpath_and_key('//*[@id="name"]', loop_title + str(start_num))
