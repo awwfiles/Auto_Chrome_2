@@ -1,4 +1,4 @@
-# Auto_Chrome_2
+# Auto_Chrome
  A cross platform pyhton IDE implimenting selenium 4
 
 
