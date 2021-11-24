@@ -3,13 +3,12 @@
 #make sure to set your variables below for this script, examples provided
 
 #####VARIABLE START####### (FILL BEFORE STARTING) ####
-file_path = "K:\\2021 Backups\\Blender\\projects\\Crypto-Verse\\Gen Season\\misc_renders"     #keep the ##\\##
-start_num = 43
-listing_option='Fixed price' ### 'Timed auction' ### 'Fixed price' ###change 'Open for bids' as desired##
+start_num = 8707
+listing_option='Open for bids' ### 'Timed auction' ### 'Fixed price' ###change 'Open for bids' as desired##
 loop_price = 0.075
 loop_title = "#"
 loop_file_format = "png"
-loop_description = "My personal collection of planets from the lone wanderer series."
+loop_description = "My personal collection of planets from the Cryptoverse Planets series."
 royalties = "10"
 #####VARIABLES END########
 
@@ -31,7 +30,7 @@ while loop_amount != 0:
 
 	while True:
 		try:
-			imagePath = os.path.abspath(file_path + "\\" + str(start_num) + "." + loop_file_format)
+			imagePath = os.path.abspath(file_folder + "\\" + str(start_num) + "." + loop_file_format)
 			css_and_key("input[name='primary-attachment']", imagePath)
 			css_and_click("img[alt='{list_op}']".format(list_op = listing_option)) 
 
@@ -46,7 +45,7 @@ while loop_amount != 0:
 
 			css_and_key("input[data-marker='root/appPage/create/form/nameInput']", loop_title+str(start_num))
 			css_and_key("textarea[data-marker='root/appPage/create/form/descriptionInput']", loop_description)
-			x = driver.find_element_by_css_selector("input[inputmode='decimal']")
+			x = wait.until(ExpectedConditions.presence_of_element_located((By.CSS_SELECTOR, "input[inputmode='decimal']")))
 			x.send_keys(Keys.BACKSPACE)
 			x.send_keys(Keys.BACKSPACE)
 			x.send_keys(royalties)  

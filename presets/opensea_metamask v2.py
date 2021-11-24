@@ -1,5 +1,7 @@
+###IMPORTANT####    Only works with MetaMask and Ethereum/Polygon collections on the Opensea  ###IMPORTANT###
+
+#make sure to set your variables below for this script, examples provided
 #####VARIABLE START####### (FILL BEFORE STARTING) ####
-file_path = "K:\\2021 Backups\\Blender\\projects\\Crypto-Verse\\Gen Season\\8706_10000"     #keep the ##\\##
 collection_link = "https://opensea.io/collection/cryptoverse-lone-wanderer"
 start_num = 9331
 loop_price = 0.1
@@ -29,7 +31,7 @@ while loop_amount != 0:
 			print("Uploading: " + str(start_num) + "  -  " + str(loop_amount) + " to go...")
 			
 			#linktext_click("Add item")
-			imagePath = os.path.abspath(file_path + "\\" + str(start_num) + "." + loop_file_format)
+			imagePath = os.path.abspath(file_folder + "\\" + str(start_num) + "." + loop_file_format)
 			xpath_and_key('//*[@id="media"]', imagePath)
 			xpath_and_key('//*[@id="name"]', loop_title + str(start_num))
 			xpath_and_key('//*[@id="external_link"]', loop_external_link)
