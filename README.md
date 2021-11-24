@@ -4,7 +4,7 @@
 
 ### This is an open-source project. 
 If you want to support this project or me, please check out my NFTs and maybe buy some, i accept most bids.
-https://opensea.io/collection/cryptoverse-lone-wanderer
+https://opensea.io/collection/cryptoverse1
 or Donate below:
 https://paypal.me/CloudMaking?locale.x=en_GB
 
