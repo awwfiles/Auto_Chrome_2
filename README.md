@@ -48,6 +48,7 @@ https://paypal.me/CloudMaking?locale.x=en_GB
 3. as far as know this only works with windows and MAC os
 4. you might get a confirmation sign request form metamask on the first uplaod, you can manually click it and the script will carry on, if you click and press "start" again
 5. if you get a  [TypeError: can only concatenate str (not "re.Pattern") to str] on launch , use th escript without the syntax highlighting.
+6. if you get [chromedriver permission error] on macOS please manually download and place the chromedriver in the chromedrivers folder (delete the other chromedrivers in that folder) found here https://chromedriver.chromium.org/downloads (download the lastest version for MacOS)
 ---
 
 If you have any questions or want to get in contact you can find me on instagram and twitter by searching @cloudmaking (feel free to DM).
