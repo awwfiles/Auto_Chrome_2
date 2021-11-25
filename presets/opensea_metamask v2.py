@@ -67,7 +67,8 @@ while loop_amount != 0:
 				linktext_click("Sell")
 				css_and_key("input[placeholder='Amount']", str(loop_price))
 				css_and_click("button[type='submit']")
-				css_and_click("button[class='Blockreact__Block-sc-1xf18x6-0 Buttonreact__StyledButton-sc-glfma3-0 bhqEJb kCijbX']")
+				####click sign to open metamask
+				xpath_and_click("/html/body/div[4]/div/div/div/section/div/div/section/div/div/div/div/div/div/div/button") ###change this code if the script doesn't press the sign button
 				time.sleep(2)
 				for handle in driver.window_handles:
 					if handle != main_page:
@@ -80,7 +81,7 @@ while loop_amount != 0:
 				break
 			except Exception as wtf:
 				#print(wtf)
-				print("----- refreshing and retrying -----")
+				print("----- refreshing and retrying ----- if this occurs alot yo might have to change the class code for the sign button")
 				go_to(current_page)
 				continue
 	elif Collection_type == "ethereum":
