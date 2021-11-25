@@ -29,9 +29,13 @@ while loop_amount != 0:
 		try:
 			####UPLOADING####
 			print("Uploading: " + str(start_num) + "  -  " + str(loop_amount) + " to go...")
-			
 			#linktext_click("Add item")
-			imagePath = os.path.abspath(file_folder + "\\" + str(start_num) + "." + loop_file_format)
+			if opsys == "Windows":
+				imagePath = os.path.abspath(file_folder + "\\" + str(start_num) + "." + loop_file_format)
+			elif opsys == "Darwin":
+				imagePath = os.path.abspath(file_folder + "/" + str(start_num) + "." + loop_file_format)
+			else:
+				imagePath = os.path.abspath(file_folder + "\\" + str(start_num) + "." + loop_file_format)
 			xpath_and_key('//*[@id="media"]', imagePath)
 			xpath_and_key('//*[@id="name"]', loop_title + str(start_num))
 			xpath_and_key('//*[@id="external_link"]', loop_external_link)
@@ -81,7 +85,7 @@ while loop_amount != 0:
 				break
 			except Exception as wtf:
 				#print(wtf)
-				print("----- refreshing and retrying ----- if this occurs alot yo might have to change the class code for the sign button")
+				print("----- refreshing and retrying ----- if this occurs alot you might have to change the class code for the sign button")
 				go_to(current_page)
 				continue
 	elif Collection_type == "ethereum":

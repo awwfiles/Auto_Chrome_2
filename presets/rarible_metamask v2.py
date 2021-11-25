@@ -30,7 +30,12 @@ while loop_amount != 0:
 
 	while True:
 		try:
-			imagePath = os.path.abspath(file_folder + "\\" + str(start_num) + "." + loop_file_format)
+			if opsys == "Windows":
+				imagePath = os.path.abspath(file_folder + "\\" + str(start_num) + "." + loop_file_format)
+			elif opsys == "Darwin":
+				imagePath = os.path.abspath(file_folder + "/" + str(start_num) + "." + loop_file_format)
+			else:
+				imagePath = os.path.abspath(file_folder + "\\" + str(start_num) + "." + loop_file_format)
 			css_and_key("input[name='primary-attachment']", imagePath)
 			css_and_click("img[alt='{list_op}']".format(list_op = listing_option)) 
 
