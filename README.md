@@ -30,6 +30,7 @@ https://paypal.me/CloudMaking?locale.x=en_GB
 8. Run the script
 
 ### PRESET BUILDER COMANDS (normal python code and syntax works)
+#### Video tutorial on how ot make your own presets: https://www.youtube.com/watch?v=l3UgWmqL89o&t=1s
 #### Find CSS and XPATH codes through the inspect window on chrome
 ##### all base selenium code also works fine (this just maks it so you dont need to setup anything)
 1. go_to(adress)
@@ -45,6 +46,7 @@ https://paypal.me/CloudMaking?locale.x=en_GB
 2. (here is a link to a handy script which does that for you: https://github.com/FireMarshmallow/Easy-file-renamer)
 3. as far as know this only works with windows and MAC os
 4. you might get a confirmation sign request form metamask on the first uplaod, you can manually click it and the script will carry on, if you click and press "start" again
+5. if you get a  [TypeError: can only concatenate str (not "re.Pattern") to str] on launch , use th escript without the syntax highlighting.
 ---
 
 If you have any questions or want to get in contact you can find me on instagram and twitter by searching @cloudmaking (feel free to DM).
