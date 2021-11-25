@@ -33,6 +33,7 @@ main_directory = os.getcwd()
 file = None
 
 print("main_directory: "+main_directory+"\nscript_location: "+os.path.join(sys.path[0])+"\nif the above do not match the browser will not open \nContact @cloudmaking on twitter for support")
+print("\n if you get the error [TypeError: can only concatenate str (not 're.Pattern') to str] Use the version of the script without syntax highlighting")
 
 class LineNumbers(Text):
     def __init__(self, master, text_widget, **kwargs):
