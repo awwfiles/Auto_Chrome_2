@@ -20,7 +20,7 @@ while loop_amount != 0:
 			break
 		except Exception as wtf:
 			#print(wtf)
-			print("----- Network error, waiting eo seocnds before restarting -----")
+			print("----- Network error, waiting eo seconds before restarting -----")
 			time.sleep(30)
 			continue
 
@@ -51,7 +51,7 @@ while loop_amount != 0:
 			break
 		except Exception as wtf:
 			#print(wtf)
-			print("----- upload complete, No upload confirmation, reloading page to start lisitng -----")
+			print("----- upload complete, No upload confirmation, reloading page to start listing -----")
 			#current_page=driver.current_url
 			#go_to(current_page)
 			break
