@@ -85,22 +85,22 @@ while loop_amount != 0:
 				continue
 	elif Collection_type == "ethereum":
 		while True:
-		try:
-			linktext_click("Sell")
-			css_and_key("input[placeholder='Amount']", str(loop_price))
-			css_and_click("button[type='submit']")
-			time.sleep(15) #change this depending on how quickly the metamask notification comes up
-			driver.switch_to.window(driver.window_handles[1])
-			xpath_and_click("//*[@id='app-content']/div/div[2]/div/div[3]/button[2]")
-			time.sleep(1)
-			driver.switch_to.window(main_page)
-			time.sleep(1)
-			break
-		except Exception as wtf:
-			print(wtf)
-			print("----- refreshing and trying -----")
-			go_to(current_page)
-			continue
+			try:
+				linktext_click("Sell")
+				css_and_key("input[placeholder='Amount']", str(loop_price))
+				css_and_click("button[type='submit']")
+				time.sleep(15) #change this depending on how quickly the metamask notification comes up
+				driver.switch_to.window(driver.window_handles[1])
+				xpath_and_click("//*[@id='app-content']/div/div[2]/div/div[3]/button[2]")
+				time.sleep(1)
+				driver.switch_to.window(main_page)
+				time.sleep(1)
+				break
+			except Exception as wtf:
+				print(wtf)
+				print("----- refreshing and trying -----")
+				go_to(current_page)
+				continue
 	else:
 		print("Please pick either 'polygon' or 'ethereum' / no caps, make sure the spellign is correct")
 		break
