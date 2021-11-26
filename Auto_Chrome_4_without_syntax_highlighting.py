@@ -99,9 +99,7 @@ def newFile():
 
 def openFile():
 	global file
-	file = askopenfilename(defaultextension=".txt",
-						   filetypes=[("All Files", "*.*"),
-									 ("Text Documents", "*.txt")])
+	file = askopenfilename()
 	if file == "":
 		file = None
 	else:
