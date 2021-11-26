@@ -14,10 +14,9 @@ https://paypal.me/CloudMaking?locale.x=en_GB
 
 
 ### Requirements
-1. Window/Mac OS
-2. Python3 and pip
-3. Chrome browser v.96+
-4. ****for MacOS you might have to manually install the latest version of the chromedriver and place it in the "chromedrivers" folder****
+1. Python3 and pip
+2. Chrome browser v.96+
+3. ****for MacOS you might have to manually install the latest version of the chromedriver and place it in the "chromedrivers" folder****
 
 # INSTRUCTIONS
 1. Download and update Python and The Chrome browser (if you don’t have it already)
