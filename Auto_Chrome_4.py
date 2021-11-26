@@ -113,9 +113,7 @@ def openFile():
 def saveFile():
 	global file
 	if file == None:
-		file = asksaveasfilename(initialfile = 'Untitled.txt', defaultextension=".txt",
-						   filetypes=[("All Files", "*.*"),
-									 ("Text Documents", "*.txt")])
+		file = asksaveasfilename(initialfile = 'Untitled.py')
 		if file =="":
 			file = None
 
