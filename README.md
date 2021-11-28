@@ -16,7 +16,7 @@ https://paypal.me/CloudMaking?locale.x=en_GB
 ### Requirements
 1. Python3 and pip
 2. Chrome browser v.96+
-3. ****for MacOS you might have to manually install the latest version of the chromedriver and place it in the "chromedrivers" folder (additionally you might have to add the chromedriver to your firewall exceptions)****
+3. ****for MacOS you might have to manually install the latest version of the chromedriver and place it in the "chromedrivers" folder (additionally you might have to add the chromedriver to your firewall exceptions) read notes below form a MacOS user fo rmore detials****
 
 # INSTRUCTIONS
 1. Download and update Python and The Chrome browser (if you don’t have it already)
@@ -48,6 +48,16 @@ https://paypal.me/CloudMaking?locale.x=en_GB
 4. you might get a confirmation sign request form metamask on the first uplaod, you can manually click it and the script will carry on, if you click and press "start" again
 5. if you get a  [TypeError: can only concatenate str (not "re.Pattern") to str] on launch , use th escript without the syntax highlighting.
 6. if you get [chromedriver permission error] on macOS please manually download and place the chromedriver in the chromedrivers folder (delete the other chromedrivers in that folder) found here https://chromedriver.chromium.org/downloads (download the lastest version for MacOS)
+---
+
+# Message for a MacOS user
+You might need to remove the quarantine attribute from the chromedriver, I did this by issuing the following command in the Terminal: 
+xattr -r -d com.apple.quarantine ~/Downloads/Auto_Chrome_2-main/chromedrivers/chromedriver
+
+You might also need to add the chromedriver to the mac Firewall exception list like so:
+
+System Preferences > Security & Privacy > (Unlock the padlock if necessary) Firewall options > click on the + icon and locate the chromedriver
+
 ---
 
 If you have any questions or want to get in contact you can find me on instagram and twitter by searching @cloudmaking (feel free to DM).
