@@ -45,7 +45,7 @@ while loop_amount != 0:
 	while True:
 		try:
 			if opsys == "Windows":
-				imagePath = os.path.abspath(file_folder + "\\instories " + str(start_num) + "." + loop_file_format)
+				imagePath = os.path.abspath(file_folder + "\\" + str(start_num) + "." + loop_file_format)
 			elif opsys == "Darwin":
 				imagePath = os.path.abspath(file_folder + "/" + str(start_num) + "." + loop_file_format)
 			else:
