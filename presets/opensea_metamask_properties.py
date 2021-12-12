@@ -81,7 +81,7 @@ while loop_amount != 0:
 			print("----- {x} not found -----")
 			continue
 
-
+	print("clicking create")
 	while True:
 		try:
 			#click create
@@ -94,6 +94,7 @@ while loop_amount != 0:
 			print("----- click nto found, retrying -----")
 			continue
 
+	print("waiting for upload confirmation")
 	while True:
 		try:
 			css_and_click("i[aria-label='Close']")
@@ -106,7 +107,7 @@ while loop_amount != 0:
 			#go_to(current_page)
 			break
 
-
+	print("listing for sale")
 	###LISTING####
 	current_page=driver.current_url
 	main_page = driver.current_window_handle
