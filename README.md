@@ -41,6 +41,8 @@ https://paypal.me/CloudMaking?locale.x=en_GB
 6. linktext_click(text)
 7. linktext_key(text, key) [havnt tested this yet]
 
+#### Must watch video for understanding selenum and making your own automation bots : https://www.youtube.com/watch?v=tRNwTXeJ75U
+
 # Important Notes please read before starting: 
 1. Do not move anything in or out of the main script folder.
 2. (here is a link to a handy script which does that for you: https://github.com/FireMarshmallow/Easy-file-renamer)
